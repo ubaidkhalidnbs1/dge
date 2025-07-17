@@ -139,7 +139,7 @@ Done separately. Implemented as backend
   "preview": "vite preview",
   "start:local": "vite --mode development",
   "start:develop": "vite --mode development",
-  "lint": "eslint . --ext .js,.jsx",
+  "lint": "eslint .",
   "format": "prettier --write .",
 }
 ```
