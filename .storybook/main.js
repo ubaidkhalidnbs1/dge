@@ -14,7 +14,7 @@ const config = {
   docs: {
     autodocs: 'tag',
   },
-  viteFinal: async (config) => {
+  viteFinal: async config => {
     // Add path aliases
     config.resolve.alias = {
       ...config.resolve.alias,
