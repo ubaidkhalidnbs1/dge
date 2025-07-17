@@ -1,0 +1,7 @@
+@use "@/styles/variables" as *;
+@use "@/styles/colors" as *;
+
+.error-label {
+  color: $error-red;
+  margin-left: $spacer-3;
+}
