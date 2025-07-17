@@ -116,7 +116,41 @@ src/
 
 Used in Step 3 for **Help Me Write** functionality:
 
-Done separately. Implemented as backend
+Done separately for security reasons. Implemented as backend. However it can be be set as follow
+
+## 🔐 How to Set Up the OpenAI API Key
+
+To enable AI writing assistance in the application form, you need to configure an OpenAI API key.
+
+### 📋 Steps
+
+1. **Create an OpenAI Account:**
+   - Visit [https://platform.openai.com/signup](https://platform.openai.com/signup)
+   - Log in and go to [API Keys](https://platform.openai.com/account/api-keys)
+
+2. **Generate a Secret API Key:**
+   - Click **"Create new secret key"**
+   - Copy the key (starts with `sk-...`)
+
+3. **Configure Environment Variable:**
+   - In the root of your project, create a `.env` file (if not present)
+   - Add this line:
+
+     ```env
+     VITE_OPENAI_API_KEY=your-secret-api-key-here
+     ```
+
+   - Replace `your-secret-api-key-here` with your actual key.
+
+   > ⚠️ Never share or commit your API key. Make sure `.env` is listed in `.gitignore`.
+
+4. **Restart the Dev Server:**
+
+   ```bash
+   npm run dev
+   ```
+
+✅ You're now ready to use the **"Help Me Write"** feature powered by OpenAI GPT!
 
 ## ⚠️ Troubleshooting
 
