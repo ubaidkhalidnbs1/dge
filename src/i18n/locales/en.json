@@ -77,7 +77,13 @@
   "validation": {
     "required": "{{field}} is required.",
     "invalid": "{{field}} is not valid.",
-    "min": "{{field}} must be at least {{min}}."
+    "min": "{{field}} must be at least {{min}}.",
+    "max": "{{field}} must not exceed {{max}}",
+    "nationalId": "{{field}} must be 10 digits long.",
+    "phone": "{{field}} must contain only numbers, +, -, spaces, or ().",
+    "email": "{{field}} must be a valid email (e.g. user@example.com).",
+    "minAge": "Age must be at least {{age}} years old.",
+    "maxAge": "Age must not be older than {{age}} years."
   },
   "error": {
     "network": "Network error. Please check your connection.",

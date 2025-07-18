@@ -36,6 +36,7 @@ const MultiStepForm = () => {
     },
   });
 
+  /* eslint-disable react-hooks/exhaustive-deps */
   const stepLabels = useMemo(
     () => [t('form.step1'), t('form.step2'), t('form.step3')],
     [i18n.language]
@@ -43,6 +44,7 @@ const MultiStepForm = () => {
 
   const totalSteps = stepLabels.length;
 
+  /* eslint-disable react-hooks/exhaustive-deps */
   useEffect(() => {
     const draft = loadDraft();
     if (draft?.formData) {

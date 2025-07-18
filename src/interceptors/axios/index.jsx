@@ -1,3 +1,4 @@
+/* eslint-disable react/no-deprecated */
 import axios from 'axios';
 import i18n from '@/i18n';
 import { Snackbar, Alert } from '@mui/material';

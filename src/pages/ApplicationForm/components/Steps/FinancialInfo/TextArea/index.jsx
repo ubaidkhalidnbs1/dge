@@ -24,7 +24,6 @@ const TextArea = ({
     await handleGenerate(name);
   };
 
-  //const showError = touchedFields?.[name] && errors?.[name];
   const showError = errors && errors?.[name];
 
   return (
@@ -59,6 +58,7 @@ const TextArea = ({
 };
 
 TextArea.propTypes = {
+  name: string.isRequired,
   activeField: string,
   loading: bool.isRequired,
   labelKey: string.isRequired,

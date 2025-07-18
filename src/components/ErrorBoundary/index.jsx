@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Alert, AlertTitle, Button, Box } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import PropTypes from 'prop-types';
 
 class ErrorBoundaryInner extends React.Component {
   constructor(props) {
@@ -43,6 +44,11 @@ class ErrorBoundaryInner extends React.Component {
   }
 }
 
+ErrorBoundaryInner.propTypes = {
+  t: PropTypes.func.isRequired,
+  children: PropTypes.node.isRequired,
+};
+
 const ErrorBoundary = ({ children }) => {
   const { t } = useTranslation();
   const [key] = useState(() => Date.now());
@@ -52,6 +58,10 @@ const ErrorBoundary = ({ children }) => {
       {children}
     </ErrorBoundaryInner>
   );
+};
+
+ErrorBoundary.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export default ErrorBoundary;

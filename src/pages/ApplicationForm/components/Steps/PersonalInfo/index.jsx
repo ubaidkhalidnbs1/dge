@@ -5,6 +5,7 @@ import { string, shape } from 'prop-types';
 import { REGEX } from '@/constants/regex';
 import SelectField from '@/pages/ApplicationForm/components/SelectField';
 import { genderOptions, personalInfo } from './constants';
+import { validateDob } from './utils';
 
 const PersonalInfo = ({ languageChange, cursorPosition, dir }) => {
   const { t } = useTranslation();
@@ -44,7 +45,7 @@ const PersonalInfo = ({ languageChange, cursorPosition, dir }) => {
             required: t('validation.required', { field: t('form.nationalId') }),
             pattern: {
               value: REGEX.NUMBER,
-              message: t('validation.invalid', { field: t('form.nationalId') }),
+              message: t('validation.nationalId', { field: t('form.nationalId') }),
             },
           })}
           error={!!errors.nationalId}
@@ -66,6 +67,7 @@ const PersonalInfo = ({ languageChange, cursorPosition, dir }) => {
           InputLabelProps={{ shrink: true }}
           {...register(dob, {
             required: t('validation.required', { field: t('form.dob') }),
+            validate: value => validateDob(value, t),
           })}
           error={!!errors.dob}
           helperText={errors.dob?.message}
@@ -158,7 +160,7 @@ const PersonalInfo = ({ languageChange, cursorPosition, dir }) => {
             required: t('validation.required', { field: t('form.phone') }),
             pattern: {
               value: REGEX.PHONE,
-              message: t('validation.invalid', { field: t('form.phone') }),
+              message: t('validation.phone', { field: t('form.phone') }),
             },
           })}
           error={!!errors.phone}
@@ -178,7 +180,7 @@ const PersonalInfo = ({ languageChange, cursorPosition, dir }) => {
             required: t('validation.required', { field: t('form.email') }),
             pattern: {
               value: REGEX.EMAIL,
-              message: t('validation.invalid', { field: t('form.email') }),
+              message: t('validation.email', { field: t('form.email') }),
             },
           })}
           error={!!errors.email}

@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react';
+import PropTypes from 'prop-types';
 import { LOCAL_STORAGE_KEY } from '../constants';
 
 const FormContext = createContext();
@@ -46,6 +47,10 @@ export const FormProvider = ({ children }) => {
       {children}
     </FormContext.Provider>
   );
+};
+
+FormProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };
 
 export const useFormContextAPI = () => useContext(FormContext);

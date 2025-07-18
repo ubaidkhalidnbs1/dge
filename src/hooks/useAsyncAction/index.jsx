@@ -1,3 +1,4 @@
+/* eslint-disable react/no-deprecated */
 import { useState } from 'react';
 import { Alert, Snackbar } from '@mui/material';
 import ReactDOM from 'react-dom';

@@ -173,7 +173,7 @@ To enable AI writing assistance in the application form, you need to configure a
   "preview": "vite preview",
   "start:local": "vite --mode development",
   "start:develop": "vite --mode development",
-  "lint": "eslint .",
+  "lint": "eslint . --ext .js,.jsx,.cjs",
   "format": "prettier --write .",
 }
 ```

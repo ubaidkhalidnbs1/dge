@@ -1,15 +1,7 @@
-import {
-  Grid,
-  MenuItem,
-  FormControl,
-  InputLabel,
-  Select,
-  FormHelperText,
-  Typography,
-} from '@mui/material';
+import { Grid, MenuItem, FormControl, Select, FormHelperText, Typography } from '@mui/material';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { string, bool, number, arrayOf, shape, oneOfType } from 'prop-types';
+import { string, number, arrayOf, shape, oneOfType } from 'prop-types';
 
 import './styles.scss';
 
